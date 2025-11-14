@@ -1,1 +1,848 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whesley dos Santos da Silva - Perfil</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <meta name="description" content="Whesley dos Santos da Silva - Programador Front-End especializado em HTML, CSS, JavaScript, React, Python e C. Confira meu portfólio e projetos.">
+    <meta name="keywords" content="Whesley Santos, Programador Front-End, Desenvolvedor Web, HTML, CSS, JavaScript, React">
+    <meta name="author" content="Whesley dos Santos da Silva">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://whesley264.github.io/">
+    <meta property="og:title" content="Whesley dos Santos da Silva - Programador Front-End">
+    <meta property="og:description" content="Programador Front-End especializado em desenvolvimento web moderno. Confira meu portfólio!">
+    <meta property="og:image" content="https://whesley264.github.io/img/profile-avatar.png">
 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://whesley264.github.io/">
+    <meta property="twitter:title" content="Whesley dos Santos da Silva - Programador Front-End">
+    <meta property="twitter:description" content="Programador Front-End especializado em desenvolvimento web moderno. Confira meu portfólio!">
+    <meta property="twitter:image" content="https://whesley264.github.io/img/profile-avatar.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #8b7355 0%, #6b5444 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .profile-card {
+            background: linear-gradient(180deg, #c4a57b 0%, #5a5a5a 35%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+
+        .profile-header {
+            padding: 60px 40px 40px;
+            position: relative;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #d4b896;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .qr-icon {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 35px;
+            height: 35px;
+            background: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .profile-info {
+            text-align: center;
+            color: white;
+        }
+
+        .profile-info h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .profile-info .role {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .profile-info .location {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 25px 0;
+        }
+
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .bio {
+            padding: 0 40px 30px;
+            color: white;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .show-more {
+            color: #4a9eff;
+            cursor: pointer;
+            text-decoration: underline;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            padding: 0 40px 40px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: transparent;
+            color: white;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .section {
+            background: #5a5a5a;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .section-title {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .project-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .project-item:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateX(5px);
+        }
+
+        .project-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-info {
+            flex: 1;
+        }
+
+        .project-name {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .project-desc {
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+        }
+
+        .verified-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .verified-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .verified-info {
+            flex: 1;
+        }
+
+        .verified-name {
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .verified-link {
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .check-badge {
+            color: #4a9eff;
+            margin-left: 5px;
+        }
+
+        /* Modal de Compartilhamento */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal {
+            background: #5a5a5a;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .modal-title {
+            color: white;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .close-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .qr-container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+            background: white;
+        }
+
+        .qr-code img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .download-qr-btn {
+            background: rgba(0, 0, 0, 0.1);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .download-qr-btn:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .share-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .share-option {
+            background: rgba(255, 255, 255, 0.05);
+            border: none;
+            padding: 15px 20px;
+            border-radius: 12px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: left;
+        }
+
+        .share-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .share-option i {
+            font-size: 20px;
+            width: 25px;
+        }
+
+        .link-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .link-text {
+            color: white;
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex: 1;
+        }
+
+        .copy-btn {
+            background: #4a9eff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .copy-btn:hover {
+            background: #3a8eef;
+        }
+
+        .copy-btn.copied {
+            background: #4caf50;
+        }
+
+        /* Modal de Contato */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-item i {
+            font-size: 24px;
+            color: #4a9eff;
+            width: 30px;
+            text-align: center;
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
+            margin-bottom: 3px;
+        }
+
+        .contact-value {
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            color: #4a9eff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="avatar">
+                    <img src="img/profile-avatar.png" alt="Whesley dos Santos da Silva">
+                    <div class="qr-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h1>Whesley dos Santos da Silva</h1>
+                    <div class="role">Programador Front-End</div>
+                    <div class="location">Travessão município de Camamu - BA</div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="Verificado">
+                        <i class="fas fa-check"></i>
+                    </a>
+                    <a href="https://whesley264.github.io" target="_blank" class="social-icon" title="Website">
+                        <i class="fas fa-link"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/whesley-dos-santos-da-silva-5a0324395" target="_blank" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://tiktok.com/@whesley.dev" target="_blank" class="social-icon" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://github.com/whesley264-oss" target="_blank" class="social-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/whesley.dev" target="_blank" class="social-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="bio">
+                Meu nome é Whesley e sou Programador Front-End. Iniciei a programação no início de 2025, desenvolvendo projetos com HTML, CSS e JavaScript. Atualmente, meu conjunto de tecnologias inclui Python, C, React e domínio em HTML, CSS e...
+                <span class="show-more">Mostrar mais</span>
+            </div>
+            <div class="buttons">
+                <button class="btn" id="shareBtn">Partilhar</button>
+                <button class="btn" id="contactBtn">Contact</button>
+            </div>
+        </div>
+
+        <!-- Modal de Compartilhamento -->
+        <div class="modal-overlay" id="shareModal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3 class="modal-title">Share Profile</h3>
+                    <button class="close-btn" onclick="closeModal('shareModal')">×</button>
+                </div>
+                
+                <div class="qr-container">
+                    <div class="qr-code" id="qrcode"></div>
+                    <button class="download-qr-btn" onclick="downloadQR()">Download QR</button>
+                </div>
+
+                <div class="share-options">
+                    <button class="share-option" onclick="shareViaEmail()">
+                        <i class="fas fa-envelope"></i>
+                        <span>Share via Email</span>
+                    </button>
+                    <button class="share-option" onclick="addToContacts()">
+                        <i class="fas fa-address-card"></i>
+                        <span>Add to contacts (vCard)</span>
+                    </button>
+                </div>
+
+                <div class="link-container">
+                    <span class="link-text" id="profileLink">https://whesley264.github.io</span>
+                    <button class="copy-btn" onclick="copyLink()">Copiar ligação</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Contato -->
+        <div class="modal-overlay" id="contactModal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h3 class="modal-title">Informações de Contato</h3>
+                    <button class="close-btn" onclick="closeModal('contactModal')">×</button>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <div class="contact-label">Email</div>
+                            <a href="mailto:whesley264@gmail.com" class="contact-link contact-value">whesley264@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <div class="contact-details">
+                            <div class="contact-label">Instagram</div>
+                            <a href="https://instagram.com/whesley.dev" target="_blank" class="contact-link contact-value">@whesley.dev</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div class="contact-details">
+                            <div class="contact-label">GitHub</div>
+                            <a href="https://github.com/whesley264-oss" target="_blank" class="contact-link contact-value">whesley264-oss</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Projetos</h2>
+            <div class="project-item" data-link="https://whesley264-oss.github.io/Pixel-Art-Editor/">
+                <div class="project-image">
+                    <img src="img/projeto1.png" alt="Projeto 1">
+                </div>
+                <div class="project-info">
+                    <div class="project-name">Pixel Art Editor ↗</div>
+                    <div class="project-desc">Um editor de pixel art bem divertido, com várias funções, feito 100% em HTML, CSS e JavaScript.</div>
+                </div>
+            </div>
+            <div class="project-item" data-link="https://whesley264-oss.github.io/Conceicao-Evaristo-Trabalho/">
+                <div class="project-image">
+                    <img src="img/projeto2.png" alt="Projeto 2">
+                </div>
+                <div class="project-info">
+                    <div class="project-name">Site Sobre Conceição Evaristo  ↗</div>
+                    <div class="project-desc">Site feito em HTML, CSS e JavaScript, um site para mostrar o trabalho de Conceição Evaristo como escritora e poeta negra, dando voz e encorajando mulheres negras.</div>
+                </div>
+            </div>
+            <div class="project-item" data-link="https://whesley264-oss.github.io/Jogo-Damas/">
+                <div class="project-image">
+                    <img src="img/projeto3.png" alt="Projeto 3">
+                </div>
+                <div class="project-info">
+                    <div class="project-name">Jogo de damas↗</div>
+                    <div class="project-desc">Um jogo de damas feito em HTML, CSS e JavaScript. O jogo conta com um modo PVP para jogar com um amigo que está ao seu lado e um modo contra IA, que funciona como um bot fazendo jogadas aleatórias. É um jogo simples para se divertir e passar o tempo.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Verified Accounts</h2>
+            <div class="verified-item">
+                <div class="verified-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="verified-info">
+                    <div class="verified-name">
+                        LinkedIn <span class="check-badge"><i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <a href="https://linkedin.com/in/whesley-dos-santos-da-silva-5a0324395" target="_blank" class="verified-link">linkedin.com/in/whesley-dos-santos-da-silva-5a0324395</a>
+                </div>
+            </div>
+            <div class="verified-item">
+                <div class="verified-icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <div class="verified-info">
+                    <div class="verified-name">
+                        TikTok <span class="check-badge"><i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <a href="https://tiktok.com/@whesley.dev" target="_blank" class="verified-link">tiktok.com/@whesley.dev</a>
+                </div>
+            </div>
+            <div class="verified-item">
+                <div class="verified-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="verified-info">
+                    <div class="verified-name">
+                        GitHub <span class="check-badge"><i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <a href="https://github.com/whesley264-oss" target="_blank" class="verified-link">github.com/whesley264-oss</a>
+                </div>
+            </div>
+            <div class="verified-item">
+                <div class="verified-icon">
+                    <i class="fab fa-gitlab"></i>
+                </div>
+                <div class="verified-info">
+                    <div class="verified-name">
+                        GitLab <span class="check-badge"><i class="fas fa-check-circle"></i></span>
+                    </div>
+                    <a href="https://gitlab.com/whesley264-oss" target="_blank" class="verified-link">gitlab.com/whesley264-oss</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        // Gerar QR Code
+        let qrcode = null;
+        const profileUrl = 'https://whesley264.github.io'; // Você atualizará este link depois
+
+        function generateQRCode() {
+            const qrContainer = document.getElementById('qrcode');
+            qrContainer.innerHTML = '';
+            qrcode = new QRCode(qrContainer, {
+                text: profileUrl,
+                width: 200,
+                height: 200,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        }
+
+        // Abrir modal de compartilhamento
+        document.getElementById('shareBtn').addEventListener('click', function() {
+            document.getElementById('shareModal').classList.add('active');
+            if (!qrcode) {
+                generateQRCode();
+            }
+        });
+
+        // Abrir modal de contato
+        document.getElementById('contactBtn').addEventListener('click', function() {
+            document.getElementById('contactModal').classList.add('active');
+        });
+
+        // Fechar modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        // Fechar modal ao clicar fora
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+
+        // Copiar link
+        function copyLink() {
+            const linkText = document.getElementById('profileLink').textContent;
+            const copyBtn = event.target;
+            
+            navigator.clipboard.writeText(linkText).then(() => {
+                const originalText = copyBtn.textContent;
+                copyBtn.textContent = 'Copiado!';
+                copyBtn.classList.add('copied');
+                
+                setTimeout(() => {
+                    copyBtn.textContent = originalText;
+                    copyBtn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // Download QR Code
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const url = canvas.toDataURL('image/png');
+                const link = document.createElement('a');
+                link.download = 'qrcode-perfil.png';
+                link.href = url;
+                link.click();
+            }
+        }
+
+        // Compartilhar via Email
+        function shareViaEmail() {
+            const subject = encodeURIComponent('Confira meu perfil - Whesley dos Santos da Silva');
+            const body = encodeURIComponent(`Olá!\n\nConfira meu perfil profissional:\n${profileUrl}\n\nWhesley dos Santos da Silva\nProgramador Front-End`);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+
+        // Adicionar aos contatos (vCard)
+        function addToContacts() {
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Whesley dos Santos da Silva
+TITLE:Programador Front-End
+EMAIL:whesley264@gmail.com
+URL:${profileUrl}
+URL:https://github.com/whesley264-oss
+URL:https://linkedin.com/in/whesley-dos-santos-da-silva-5a0324395
+URL:https://instagram.com/whesley.dev
+END:VCARD`;
+
+            const blob = new Blob([vcard], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'whesley-santos.vcf';
+            link.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Mostrar mais/menos biografia
+        document.querySelector('.show-more').addEventListener('click', function() {
+            const bio = this.parentElement;
+            if (this.textContent === 'Mostrar mais') {
+                bio.innerHTML = `Meu nome é Whesley e sou Programador Front-End. Iniciei a programação no início de 2025, desenvolvendo projetos com HTML, CSS e JavaScript. Atualmente, meu conjunto de tecnologias inclui Python, C, React e domínio em HTML, CSS e JavaScript. Tenho experiência em desenvolvimento web responsivo e estou sempre buscando aprender novas tecnologias para criar soluções inovadoras.
+                <span class="show-more">Mostrar menos</span>`;
+            } else {
+                bio.innerHTML = `Meu nome é Whesley e sou Programador Front-End. Iniciei a programação no início de 2025, desenvolvendo projetos com HTML, CSS e JavaScript. Atualmente, meu conjunto de tecnologias inclui Python, C, React e domínio em HTML, CSS e...
+                <span class="show-more">Mostrar mais</span>`;
+            }
+            
+            document.querySelector('.show-more').addEventListener('click', arguments.callee);
+        });
+
+        // Click nos projetos
+        document.querySelectorAll('.project-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const link = this.getAttribute('data-link');
+                if (link && link !== 'SEU_LINK_PROJETO_1' && link !== 'SEU_LINK_PROJETO_2' && link !== 'SEU_LINK_PROJETO_3') {
+                    window.open(link, '_blank');
+                } else {
+                    alert('Configure o link deste projeto no atributo data-link');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
