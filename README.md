@@ -35,7 +35,7 @@
 
 ###
 
-<p align="left">Eu comecei a programar no início de 2025. Comecei fazendo sites simples em HTML, CSS e JavaScript, depois fui avançando para outras linguagens. Atualmente programo em HTML, CSS, JavaScript, Python, C e React. Já até pensei em colocar JavaScript nessa coleção, mas mudei de ideia 😅😅.</p>
+<p align="left">Eu comecei a programar no início de 2025. Comecei fazendo sites simples em HTML, CSS e JavaScript, depois fui avançando para outras linguagens. Atualmente programo em HTML, CSS, JavaScript, Python, C e React. Já até pensei em colocar Java nessa coleção, mas mudei de ideia 😅😅.</p>
 
 ###
 
